@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastrar Veículo - TutStock Motors</title>
+  <title>Editar Veículo - TutStock Motors</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -12,9 +12,12 @@
 
 <div class="layout">
 
+  <!-- SIDEBAR -->
   <aside class="sidebar">
 
-    <h3 class="brand-title mb-4">TutStock</h3>
+    <h3 class="brand-title mb-4">
+      TutStock
+    </h3>
 
     <ul class="nav flex-column gap-2">
 
@@ -25,13 +28,13 @@
       </li>
 
       <li>
-        <a href="veiculos.html" class="nav-link">
+        <a href="veiculos.html" class="nav-link active-link">
           Veículos
         </a>
       </li>
 
       <li>
-        <a href="cadastrar-veiculo.html" class="nav-link active-link">
+        <a href="cadastrar-veiculo.html" class="nav-link">
           Cadastrar Veículo
         </a>
       </li>
@@ -66,21 +69,28 @@
 
   </aside>
 
+  <!-- CONTEÚDO -->
   <main class="main-content">
 
     <div class="mb-4">
-      <h2 class="fw-bold">Cadastrar Veículo</h2>
+      <h2 class="fw-bold">
+        Editar Veículo
+      </h2>
+
       <p class="text-muted mb-0">
-        Adicione um novo carro ao estoque
+        Atualize as informações do veículo
       </p>
     </div>
 
     <div class="card border-0 shadow-sm rounded-4">
+
       <div class="card-body p-4">
 
-        <form id="formVeiculo" class="row g-3">
+        <form id="formEditar" class="row g-3">
 
+          <!-- MARCA -->
           <div class="col-md-6">
+
             <label class="form-label">
               Marca
             </label>
@@ -92,9 +102,12 @@
               placeholder="Ex: Toyota"
               required
             >
+
           </div>
 
+          <!-- MODELO -->
           <div class="col-md-6">
+
             <label class="form-label">
               Modelo
             </label>
@@ -106,9 +119,12 @@
               placeholder="Ex: Corolla"
               required
             >
+
           </div>
 
+          <!-- ANO -->
           <div class="col-md-4">
+
             <label class="form-label">
               Ano
             </label>
@@ -119,12 +135,14 @@
               class="form-control"
               min="1950"
               max="2026"
-              placeholder="2020"
               required
             >
+
           </div>
 
+          <!-- PLACA -->
           <div class="col-md-4">
+
             <label class="form-label">
               Placa
             </label>
@@ -137,55 +155,12 @@
               placeholder="ABC1D23"
               required
             >
+
           </div>
 
+          <!-- STATUS -->
           <div class="col-md-4">
-            <label class="form-label">
-              Quilometragem
-            </label>
 
-            <input
-              type="number"
-              id="quilometragem"
-              class="form-control"
-              min="0"
-              max="1000000"
-              placeholder="50000"
-              required
-            >
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">
-              Valor de Compra
-            </label>
-
-            <input
-              type="number"
-              id="valorCompra"
-              class="form-control"
-              min="1"
-              placeholder="35000"
-              required
-            >
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">
-              Valor de Venda
-            </label>
-
-            <input
-              type="number"
-              id="valorVenda"
-              class="form-control"
-              min="1"
-              placeholder="42000"
-              required
-            >
-          </div>
-
-          <div class="col-md-6">
             <label class="form-label">
               Status
             </label>
@@ -195,6 +170,7 @@
               class="form-select"
               required
             >
+
               <option value="Disponível">
                 Disponível
               </option>
@@ -206,29 +182,87 @@
               <option value="Vendido">
                 Vendido
               </option>
+
             </select>
+
           </div>
 
+          <!-- QUILOMETRAGEM -->
+          <div class="col-md-6">
+
+            <label class="form-label">
+              Quilometragem
+            </label>
+
+            <input
+              type="number"
+              id="quilometragem"
+              class="form-control"
+              min="0"
+              max="1000000"
+              required
+            >
+
+          </div>
+
+          <!-- VALOR COMPRA -->
+          <div class="col-md-6">
+
+            <label class="form-label">
+              Valor Compra
+            </label>
+
+            <input
+              type="number"
+              id="valorCompra"
+              class="form-control"
+              min="1"
+              required
+            >
+
+          </div>
+
+          <!-- VALOR VENDA -->
+          <div class="col-md-6">
+
+            <label class="form-label">
+              Valor Venda
+            </label>
+
+            <input
+              type="number"
+              id="valorVenda"
+              class="form-control"
+              min="1"
+              required
+            >
+
+          </div>
+
+          <!-- DESCRIÇÃO -->
           <div class="col-12">
+
             <label class="form-label">
               Descrição
             </label>
 
             <textarea
               id="descricao"
-              class="form-control"
               rows="4"
+              class="form-control"
               placeholder="Informações adicionais do veículo..."
             ></textarea>
+
           </div>
 
+          <!-- BOTÕES -->
           <div class="col-12 d-flex gap-2 mt-4">
 
             <button
               type="submit"
               class="btn btn-primary px-4"
             >
-              Salvar Veículo
+              Salvar Alterações
             </button>
 
             <a
@@ -243,6 +277,7 @@
         </form>
 
       </div>
+
     </div>
 
   </main>
@@ -250,7 +285,7 @@
 </div>
 
 <script src="js/storage.js"></script>
-<script src="js/cadastro.js"></script>
+<script src="js/editar.js"></script>
 
 </body>
 </html>

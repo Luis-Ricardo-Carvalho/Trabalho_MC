@@ -42,8 +42,21 @@ function renderizarVeiculos() {
         <td>${v.placa}</td>
         <td><span class="badge-status ${getStatusClass(v.status)}">${v.status}</span></td>
         <td>R$ ${Number(v.valorVenda).toLocaleString("pt-BR")}</td>
-        <td>
-          <button class="btn btn-sm btn-outline-danger" onclick="removerVeiculo(${index})">Excluir</button>
+        <td class="d-flex gap-2">
+          <a href="detalhes-veiculo.html?id=${index}"
+            class="btn btn-sm btn-outline-dark">
+            Ver
+          </a>
+
+          <a href="editar-veiculo.html?id=${index}"
+            class="btn btn-sm btn-outline-warning">
+            Editar
+          </a>
+
+          <button class="btn btn-sm btn-outline-danger"
+                  onclick="removerVeiculo(${index})">
+                  Excluir
+          </button>
         </td>
       </tr>
     `;

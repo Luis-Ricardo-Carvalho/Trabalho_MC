@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Veículo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="d-flex">
+
+  <aside class="sidebar">
+      <h3 class="brand-title mb-4">TutStock</h3>
+
+      <ul class="nav flex-column gap-2">
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="veiculos.html" class="nav-link">Veículos</a></li>
+        <li><a href="cadastrar-veiculo.html" class="nav-link">Cadastrar Veículo</a></li>
+        <li><a href="relatorios.html" class="nav-link">Relatórios</a></li>
+        <li><a href="perfil.html" class="nav-link">Perfil</a></li>
+        <li><a href="login.html" class="nav-link text-danger">Sair</a></li>
+      </ul>
+      
+      <hr class="border-secondary">
+      <div class="text-center mt-4"><small class="text-secondary">TutStock Motors v1.0</small></div>
+    </aside>
+
+  <main class="main-content p-4 w-100">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h2 class="fw-bold">Detalhes do Veículo</h2>
+        <p class="text-muted">Informações completas</p>
+      </div>
+
+      <div class="d-flex gap-2">
+        <a id="btnEditar" class="btn btn-warning">Editar</a>
+        <a id="btnVenda" class="btn btn-success">Registrar Venda</a>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body">
+
+            <img
+              src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1200"
+              class="img-fluid rounded-4 mb-3"
+            >
+
+            <h3 id="tituloVeiculo"></h3>
+
+            <span id="statusVeiculo"></span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body">
+
+            <div class="row g-4">
+
+              <div class="col-md-6">
+                <h6 class="text-muted">Marca</h6>
+                <p id="marca"></p>
+              </div>
+
+              <div class="col-md-6">
+                <h6 class="text-muted">Modelo</h6>
+                <p id="modelo"></p>
+              </div>
+
+              <div class="col-md-6">
+                <h6 class="text-muted">Ano</h6>
+                <p id="ano"></p>
+              </div>
+
+              <div class="col-md-6">
+                <h6 class="text-muted">Placa</h6>
+                <p id="placa"></p>
+              </div>
+
+              <div class="col-md-6">
+                <h6 class="text-muted">Quilometragem</h6>
+                <p id="quilometragem"></p>
+              </div>
+
+              <div class="col-md-6">
+                <h6 class="text-muted">Valor Compra</h6>
+                <p id="valorCompra"></p>
+              </div>
+
+              <div class="col-md-6">
+                <h6 class="text-muted">Valor Venda</h6>
+                <p id="valorVenda"></p>
+              </div>
+
+              <div class="col-12">
+                <h6 class="text-muted">Descrição</h6>
+                <p id="descricao"></p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/detalhes.js"></script>
+
+</body>
+</html>
